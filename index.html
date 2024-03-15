@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mini Font Converter</title>
+</head>
+<style>
+    #r {
+        font-size: 25px;
+    }
+
+    textarea {
+        width: 90%;
+        height: 150px;
+        color: aliceblue;
+        resize: none;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #r {
+        color: aliceblue;
+    }
+
+    * {
+        background-color: #333;
+        color: rgb(220 50 50);
+    }
+</style>
+
+<body>
+    <center>
+        <h1>Mini Font Converter</h1>
+        <div>
+            <textarea id="txt" placeholder="Digite aqui sua palavra ou texto..."></textarea><br>
+        </div>
+        <hr>Resultado:<br>
+        <div id="r"></div>
+        <br>
+        <hr>
+        Codigo HTML:
+        <textarea id="c"></textarea>
+    </center>
+</body>
+
+<script>
+
+
+    setInterval(() => {
+
+        if (document.getElementById("txt") === document.activeElement) {
+            document.getElementById("r").innerHTML = converter(document.getElementById("txt").value);
+
+
+
+            document.getElementById("c").textContent = "" + converter(document.getElementById("txt").value) + "";
+
+        }
+
+    }, 1)
+
+
+
+    function converter(a) {
+        a = a.toUpperCase();
+        for (var i = 0; i < 100; i++) {
+            a = a.replace("á", "a");
+            a = a.replace("ã", "a");
+            a = a.replace("à", "a");
+            a = a.replace("Á", "A");
+            a = a.replace("Ã", "A");
+            a = a.replace("À", "A");
+            a = a.replace("ç", "c");
+            a = a.replace("Ç", "C");
+            a = a.replace("é", "e");
+            a = a.replace("è", "e");
+            a = a.replace("ë", "e");
+            a = a.replace("É", "E");
+            a = a.replace("È", "E");
+            a = a.replace("Ë", "E");
+            a = a.replace("Í", "I");
+            a = a.replace("Ì", "I");
+            a = a.replace("Î", "I");
+            a = a.replace("í", "i");
+            a = a.replace("ì", "i");
+            a = a.replace("î", "i");
+            a = a.replace("ó", "o");
+            a = a.replace("õ", "o");
+            a = a.replace("ò", "o");
+            a = a.replace("Ó", "O");
+            a = a.replace("Õ", "O");
+            a = a.replace("Ò", "I");
+            a = a.replace("Ú", "U");
+            a = a.replace("Ü", "U");
+            a = a.replace("Ù", "U");
+            a = a.replace("ú", "u");
+            a = a.replace("ü", "u");
+            a = a.replace("ù", "u");
+            a = a.replace("ê", "e");
+            a = a.replace("ô", "o");
+            a = a.replace("â", "a");
+
+            a = a.replace("Â", "A");
+            a = a.replace("Ê", "E");
+            a = a.replace("Ô", "O");
+
+
+
+
+
+            a = a.replace("A", "&#7491;");
+            a = a.replace("B", "&#7495;");
+            a = a.replace("C", "&#7580;");
+            a = a.replace("D", "&#7496;");
+            a = a.replace("E", "&#7497;");
+            a = a.replace("F", "&#7584;");
+            a = a.replace("G", "&#7501;");
+            a = a.replace("H", "&#688;");
+            a = a.replace("I", "&#8305;");
+            a = a.replace("J", "&#690;");
+            a = a.replace("K", "&#7503;");
+            a = a.replace("L", "&#737;");
+            a = a.replace("M", "&#7504;");
+            a = a.replace("N", "&#8319;");
+            a = a.replace("O", "&#7506;");
+            a = a.replace("P", "&#7510;");
+            a = a.replace("Q", "&#740;");
+            a = a.replace("R", "&#691;");
+            a = a.replace("S", "&#738;");
+            a = a.replace("T", "&#7511;");
+            a = a.replace("U", "&#7512;");
+            a = a.replace("V", "&#7515;");
+            a = a.replace("W", "&#695;");
+            a = a.replace("X", "&#739;");
+            a = a.replace("Y", "&#696;");
+            a = a.replace("Z", "&#7611;");
+
+
+
+            //
+            //a = a.replace("a","&#120198;");
+            //a = a.replace("b","&#120199;");
+            //a = a.replace("c","&#120200;");
+            //a = a.replace("d","&#120201;");
+            //a = a.replace("e","&#120202;");
+            //a = a.replace("f","&#120203;");
+            //a = a.replace("g","&#120204;");
+            //a = a.replace("h","&#120205;");
+            //a = a.replace("i","&#120206;");
+            //a = a.replace("j","&#120207;");
+            //a = a.replace("k","&#120208;");
+            //a = a.replace("l","&#120209;");
+            //a = a.replace("m","&#120210;");
+            //a = a.replace("n","&#120211;");
+            //a = a.replace("o","&#120212;");
+            //a = a.replace("p","&#120213;");
+            //a = a.replace("q","&#120214;");
+            //a = a.replace("r","&#120215;");
+            //a = a.replace("s","&#120216;");
+            //a = a.replace("t","&#120217;");
+            //a = a.replace("u","&#120218;");
+            //a = a.replace("v","&#120219;");
+            //a = a.replace("w","&#120220;");
+            //a = a.replace("x","&#120221;");
+            //a = a.replace("y","&#120222;");
+            //a = a.replace("z","&#120223;");
+
+        }
+        return a;
+    }
+
+
+    function reverso(a) {
+        for (var i = 0; i < 100; i++) {
+            a = a.replace("á", "a");
+            a = a.replace("ã", "a");
+            a = a.replace("à", "a");
+            a = a.replace("Á", "A");
+            a = a.replace("Ã", "A");
+            a = a.replace("À", "A");
+            a = a.replace("ç", "c");
+            a = a.replace("Ç", "C");
+            a = a.replace("é", "e");
+            a = a.replace("è", "e");
+            a = a.replace("ë", "e");
+            a = a.replace("É", "E");
+            a = a.replace("È", "E");
+            a = a.replace("Ë", "E");
+            a = a.replace("Í", "I");
+            a = a.replace("Ì", "I");
+            a = a.replace("Î", "I");
+            a = a.replace("í", "i");
+            a = a.replace("ì", "i");
+            a = a.replace("î", "i");
+            a = a.replace("ó", "o");
+            a = a.replace("õ", "o");
+            a = a.replace("ò", "o");
+            a = a.replace("Ó", "O");
+            a = a.replace("Õ", "O");
+            a = a.replace("Ò", "I");
+            a = a.replace("Ú", "U");
+            a = a.replace("Ü", "U");
+            a = a.replace("Ù", "U");
+            a = a.replace("ú", "u");
+            a = a.replace("ü", "u");
+            a = a.replace("ù", "u");
+            a = a.replace("ê", "e");
+            a = a.replace("ô", "o");
+            a = a.replace("â", "a");
+
+            a = a.replace("Â", "A");
+            a = a.replace("Ê", "E");
+            a = a.replace("Ô", "O");
+
+
+
+
+
+            a = a.replace("A", "&#120172;");
+            a = a.replace("B", "&#120173;");
+            a = a.replace("C", "&#120174;");
+            a = a.replace("D", "&#120175;");
+            a = a.replace("E", "&#120176;");
+            a = a.replace("F", "&#120177;");
+            a = a.replace("G", "&#120178;");
+            a = a.replace("H", "&#120179;");
+            a = a.replace("I", "&#120180;");
+            a = a.replace("J", "&#120181;");
+            a = a.replace("K", "&#120182;");
+            a = a.replace("L", "&#120183;");
+            a = a.replace("M", "&#120184;");
+            a = a.replace("N", "&#120185;");
+            a = a.replace("O", "&#120186;");
+            a = a.replace("P", "&#120187;");
+            a = a.replace("Q", "&#120188;");
+            a = a.replace("R", "&#120189;");
+            a = a.replace("S", "&#120190;");
+            a = a.replace("T", "&#120191;");
+            a = a.replace("U", "&#120192;");
+            a = a.replace("V", "&#120193;");
+            a = a.replace("W", "&#120194;");
+            a = a.replace("X", "&#120195;");
+            a = a.replace("Y", "&#120196;");
+            a = a.replace("Z", "&#120197;");
+
+
+
+
+            a = a.replace("a", "&#120198;");
+            a = a.replace("b", "&#120199;");
+            a = a.replace("c", "&#120200;");
+            a = a.replace("d", "&#120201;");
+            a = a.replace("e", "&#120202;");
+            a = a.replace("f", "&#120203;");
+            a = a.replace("g", "&#120204;");
+            a = a.replace("h", "&#120205;");
+            a = a.replace("i", "&#120206;");
+            a = a.replace("j", "&#120207;");
+            a = a.replace("k", "&#120208;");
+            a = a.replace("l", "&#120209;");
+            a = a.replace("m", "&#120210;");
+            a = a.replace("n", "&#120211;");
+            a = a.replace("o", "&#120212;");
+            a = a.replace("p", "&#120213;");
+            a = a.replace("q", "&#120214;");
+            a = a.replace("r", "&#120215;");
+            a = a.replace("s", "&#120216;");
+            a = a.replace("t", "&#120217;");
+            a = a.replace("u", "&#120218;");
+            a = a.replace("v", "&#120219;");
+            a = a.replace("w", "&#120220;");
+            a = a.replace("x", "&#120221;");
+            a = a.replace("y", "&#120222;");
+            a = a.replace("z", "&#120223;");
+
+        }
+        return a;
+    }
+
+
+
+
+
+</script>
+<footer>
+    <center>
+        <h6 style="color:#666">𝕮𝖗𝖎𝖆𝖉𝖔 𝖕𝖔𝖗 𝕭𝖗𝖊𝖘𝖔𝕯𝕰𝖁</h6>
+    </center>
+</footer>
+
+</html>
