@@ -1,51 +1,167 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title>Mini Font Converter</title>
-</head>
+<html lang="pt-BR">
 <style>
-    #r {
-        font-size: 25px;
-    }
-
-    textarea {
-        width: 90%;
-        height: 150px;
-        color: aliceblue;
-        resize: none;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    #r {
-        color: aliceblue;
+    * {
+        -webkit-tap-highlight-color: transparent;
+        /* Remove o flash azul no toque */
+        -webkit-touch-callout: none;
+        /* Remove menu de toque (iOS) */
+        user-select: none;
+        /* Impede seleção de texto acidental (opcional) */
+        -webkit-user-select: none;
+        /* Compatibilidade com WebKit */
     }
 
     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 900px;
+        padding: 20px;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+        color: #f1f1f1;
+    }
+
+    .header p {
+        font-size: 1.2rem;
+        color: #b0b0b0;
+    }
+
+    .form-section,
+    .result-section {
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #f1f1f1;
+    }
+
+    .music-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        color: #e0e0e0;
+    }
+
+
+    img {
+        width: 70%;
+    }
+
+    textarea,
+    input {
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #444;
+        background-color: #222;
+        color: #f1f1f1;
+        font-size: 1rem;
+        border-radius: 5px;
+        resize: none;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1.1rem;
+        background-color: #6200ea;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #3700b3;
+    }
+
+    .art-placeholder,
+    .lyrics-placeholder {
         background-color: #333;
-        color: rgb(220 50 50);
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        color: #b0b0b0;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 15px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        button {
+            font-size: 1rem;
+        }
     }
 </style>
 
-<body>
-    <center>
-        <h1>Mini Font Converter</h1>
-        <div>
-            <textarea id="txt" placeholder="Digite aqui sua palavra ou texto..."></textarea><br>
-        </div>
-        <hr>Resultado:<br>
-        <div id="r"></div>
-        <br>
-        <hr>
-        Codigo HTML:
-        <br>
-        <textarea id="c"></textarea>
-    </center>
-</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniFont Creator</title>
+</head>
 
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 style="color:cyan">MiniFont Creator</h1>
+
+        </header>
+        <section class="form-section">
+            <div class="music-form">
+
+                <textarea id="txt" placeholder="Digite aqui sua palavra ou texto..."></textarea><br>
+
+                <p>Resultado:</p><br>
+                <div id="r"></div>
+                <br>
+                <hr>
+                <br>
+                <p>Codigo HTML:</p>
+                <br>
+                <textarea id="c"></textarea>
+
+            </div>
+        </section>
+    </div>
+</body>
 <script>
 
 
@@ -285,10 +401,4 @@
 
 
 </script>
-<footer>
-    <center>
-        <h6 style="color:#666">𝕮𝖗𝖎𝖆𝖉𝖔 𝖕𝖔𝖗 𝕭𝖗𝖊𝖘𝖔𝕯𝕰𝖁</h6>
-    </center>
-</footer>
-
 </html>
